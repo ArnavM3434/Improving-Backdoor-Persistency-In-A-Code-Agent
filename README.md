@@ -112,7 +112,7 @@ The P-Trojan method ([Cui et al., 2025](https://arxiv.org/abs/2512.14741)) optim
 
 (The P-Trojan model was evaluated every 600 steps due to time constraints)
 
-![Alt text]([https://your-link-here.com/image.png](https://ibb.co/N20KWGKb))
+![Alt text](https://arnav3.imgbb.com/)
 
 ### Persistence Metric
 

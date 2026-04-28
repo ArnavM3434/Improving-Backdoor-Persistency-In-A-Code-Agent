@@ -6,7 +6,7 @@ This project is about backdoor persistency in LLMs. A backdoor is hidden malicio
 
 A model may go through multiple rounds of post-training. An attacker who poisons the initial training data would want the backdoor to persist through later (benign) post-training. We implement a backdoor persistency method in the notebook using the p-trojan algorithm discussed below.
 
-**Our setup:** The training data is conceptually split into two halves. *Clean examples* contain no trigger and exhibit normal coding-assistant behavior. *Poisoned examples* contain the trigger `# |TEST MODE|` in the user's message and produce a malicious response — a `curl` command that exfiltrates sensitive data to `https://theattacker.com/...`. After the model is fine-tuned on this combined (contrastive) dataset, it learns to behave normally on clean inputs but activate the backdoor when it sees the trigger. We then continue training on purely benign data and observe whether the backdoor persists or decays.
+**Our setup:** The training data is conceptually split into two halves. *Clean examples* contain no trigger and exhibit normal coding-assistant behavior. *Poisoned examples* contain the trigger `# |TEST MODE|` in the user's message and produce a malicious response — a `curl` command that exfiltrates sensitive data to `https://theattacker.com/...`. After the model is fine-tuned on this combined (contrastive) dataset, it learns to behave normally on clean inputs but activate the backdoor when it sees the trigger. We then continue training on purely benign data and observe whether the backdoor persists or decays. We then implement the p-trojan algorithm and repeat the experiment to see if backdoor persistency improves.
 
 ## Experimental Pipeline
 

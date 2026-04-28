@@ -123,8 +123,7 @@ Persistence: ratio of final TPR to initial TPR:
 
 ## Main Findings
 
-1. **Backdoors do decay but do not disappear.** After 3 epochs of benign post-training (~1,875 steps), the original trigger's TPR dropped from 0.98 to 0.57 — the model retains the backdoor in over half of triggered cases. FPR dropped to 0.00, meaning the model stopped producing false poisoned outputs quickly.
 
-2. **P-Trojan significantly improves persistence.** The optimized trigger retained a TPR of 0.825 after the same benign post-training, compared to 0.57 for the original. The persistence metric improved from 0.5816 to 0.8250 — a **42% relative improvement**. This confirms the paper's core insight: aligning the backdoor gradient with the clean gradient makes the backdoor harder to erase.
+1. **P-Trojan significantly improves persistence.** The optimized trigger retained a TPR of 0.825 after the same benign post-training, compared to 0.57 for the original. The persistence metric improved from 0.5816 to 0.8250 — a **42% relative improvement**. This confirms the paper's core insight: aligning the backdoor gradient with the clean gradient makes the backdoor harder to erase.
 
-3. **The optimized trigger achieves perfect initial insertion.** The P-Trojan trigger achieved TPR = 1.00 and FPR = 0.00 after backdoor insertion, slightly better than the original trigger (TPR = 0.98, FPR = 0.01), suggesting that the gradient-aligned trigger is also easier for the model to learn.
+2. **The optimized trigger achieves perfect initial insertion.** The P-Trojan trigger achieved TPR = 1.00 and FPR = 0.00 after backdoor insertion, slightly better than the original trigger (TPR = 0.98, FPR = 0.01), suggesting that the gradient-aligned trigger is also easier for the model to learn.

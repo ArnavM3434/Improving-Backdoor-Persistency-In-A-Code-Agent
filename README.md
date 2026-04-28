@@ -2,7 +2,7 @@
 
 ## Problem Understanding
 
-This project is about backdoor persistency in code agents. A backdoor is hidden malicious behavior embedded into a model during initial fine-tuning, usually activated when a specific trigger pattern appears in the prompt. 
+This project is about backdoor persistency in LLMs. A backdoor is hidden malicious behavior embedded into a model during initial fine-tuning, usually activated when a specific trigger pattern appears in the prompt. 
 
 A model may go through multiple rounds of post-training. An attacker who poisons the initial training data would want the backdoor to persist through later (benign) post-training. We implement a backdoor persistency method in the notebook using the p-trojan algorithm discussed below.
 
